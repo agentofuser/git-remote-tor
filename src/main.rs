@@ -3,12 +3,17 @@ use std::process::Command;
 
 fn main() {
     match env::var("GIT_DIR") {
-        Ok(val) => {
+        Ok(_git_dir) => {
+            let args: Vec<String> = env::args().collect();
+            let url = &args[2];
+            let protocol = url.splitn(2, ':').collect::<Vec<&str>>()[0];
+            let remote_helper = "git-remote-".to_owned() + protocol;
+
             Command::new("torsocks")
-                .arg("git-remote-http")
-                .args(env::args().skip(1))
+                .arg(&remote_helper)
+                .args(args.iter().skip(1))
                 .spawn()
-                .expect("Error proxying to git-remote-*");
+                .expect(&format!("Error proxying to {}", &remote_helper));
         }
         Err(e) => {
             eprintln!("GIT_DIR is not set: {}", e);
