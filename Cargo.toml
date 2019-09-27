@@ -8,7 +8,7 @@ documentation = "https://agentofuser.com/git-remote-tor/"
 homepage = "https://agentofuser.com/git-remote-tor/"
 repository = "https://github.com/agentofuser/git-remote-tor"
 
-readme = "readme.md"
+readme = "README.md"
 description = "Seamless .onion and tor-ified git remotes"
 keywords = ["cli", "git", "tor", "onion", "peer-to-peer"]
 categories = ["command-line-utilities", "cryptography", "network-programming", "development-tools"]
