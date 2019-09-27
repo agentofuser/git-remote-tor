@@ -4,6 +4,19 @@ version = "0.1.0"
 authors = ["Agent of User <git@agentofuser.com>"]
 edition = "2018"
 
+documentation = "https://agentofuser.com/git-remote-tor/"
+homepage = "https://agentofuser.com/git-remote-tor/"
+repository = "https://github.com/agentofuser/git-remote-tor"
+
+readme = "readme.md"
+description = "Seamless .onion and tor-ified git remotes"
+keywords = ["cli", "git", "tor", "onion", "peer-to-peer"]
+categories = ["command-line-utilities", "cryptography", "network-programming", "development-tools"]
+license = "MIT OR Apache-2.0"
+
+[badges]
+maintenance = { status = "passively-maintained" }
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
