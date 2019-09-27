@@ -7,9 +7,10 @@ fn main() {
             let args: Vec<String> = env::args().collect();
             let url = &args[2];
             let protocol = url.splitn(2, ':').collect::<Vec<&str>>()[0];
-            let remote_helper = "git-remote-".to_owned() + protocol;
+            let remote_helper = "remote-".to_owned() + protocol;
 
             Command::new("torsocks")
+                .arg("git")
                 .arg(&remote_helper)
                 .args(args.iter().skip(1))
                 .spawn()
