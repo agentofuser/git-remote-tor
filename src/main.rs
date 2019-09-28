@@ -15,7 +15,9 @@ fn main() {
                 .arg(&remote_helper)
                 .args(args.iter().skip(1))
                 .spawn()
-                .expect(&format!("Error proxying to {}", &remote_helper));
+                .unwrap_or_else(|_| {
+                    panic!("Error proxying to {}", &remote_helper)
+                });
         }
         Err(_e) => {
             eprintln!(
