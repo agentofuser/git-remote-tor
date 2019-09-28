@@ -20,3 +20,4 @@ maintenance = { status = "passively-maintained" }
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+indoc = "^0.3.4"
