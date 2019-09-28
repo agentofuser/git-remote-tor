@@ -11,7 +11,7 @@
 
 > Seamless .onion and tor-ified git remotes
 
-### 🏠 [Homepage](https://agentofuser.com/git-remote-tor/)
+### 🏠 [Documentation](https://agentofuser.com/git-remote-tor/)
 
 ## Install
 
@@ -21,9 +21,23 @@ cargo install git-remote-tor
 
 ## Usage
 
+Prepend `tor::` to the remote's URL. Examples:
+
 ```sh
-git clone tor::http://myonionaddress.onion/
+# clone .onion address
+git clone git clone tor::http://3lytcgmoe2j75c6t.onion/ logit
+
+# clone clearnet address
+git clone tor::https://github.com/agentofuser/logit.git logit
+
+# add remote to existing repo
+git remote add agentofuser tor::https://github.com/agentofuser/logit.git
 ```
+
+Then use `git fetch`, `git pull`, etc. as you normally would.
+
+For more information (including how to serve a read-only .onion git repo) check
+out [the docs](https://agentofuser.com/git-remote-tor/).
 
 ## Author
 
