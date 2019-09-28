@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to git-remote-tor 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.3-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.4-blue.svg?cacheSeconds=2592000" />
   <a href="https://agentofuser.com/git-remote-tor/" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -25,7 +25,7 @@ Prepend `tor::` to the remote's URL. Examples:
 
 ```sh
 # clone .onion address
-git clone git clone tor::http://3lytcgmoe2j75c6t.onion/ logit
+git clone tor::http://3lytcgmoe2j75c6t.onion/ logit
 
 # clone clearnet address
 git clone tor::https://github.com/agentofuser/logit.git logit
